@@ -1,0 +1,68 @@
+<gigo-include-in file="includes/doc-template.html" />
+
+        <div class="contentsBox">
+            <div class="contentsBoxHeader">Configure Gigo</div>
+            <div class="contentsBoxBody">
+                <p>
+                    <p>When running gigo binary, it is possible to pass an argument containing the path of a configuration
+                        file. <p/>
+                    <pre>
+~/website-example$ <b>gigo Gigo.yaml</b>
+                    </pre>
+                    <p>In that configuration file, Gigo expects a YAML format containing one or many of the following properties:</p>
+                    <pre>
+sourceDir: /home/user/website-example
+outputDir: /var/www/html
+patternFilesToParse: '*.html'
+patternFilesToExclude: "gigo .readme"
+patternDirsToExclude: ".idea myfolder"
+                    </pre>
+
+                    <table>
+                        <tr>
+                            <th>Property</th>
+                            <th>Default value</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>sourceDir</td>
+                            <td>.</td>
+                            <td>The root working directory of the website where the source files are located.</td>
+                        </tr>
+                        <tr>
+                            <td>outputDir</td>
+                            <td>output</td>
+                            <td>The directory where the generated website's files will be copied to.</td>
+                        </tr>
+                        <tr>
+                            <td>patternFilesToParse</td>
+                            <td>*.html</td>
+                            <td>The files to parse in order to generate new files from them. <br/>
+                                If there are many files patterns, separate them with a space. Example: "*.html *.js"</td>
+                        </tr>
+                        <tr>
+                            <td>patternFilesToExclude</td>
+                            <td>gigo</td>
+                            <td>The files which are located somewhere in the working directory and we do not
+                                want to copy in the output folder when generating a website.<br/>
+                                If there are many files patterns, separate them with a space. Example: "gigo .readme"</td>
+                        </tr>
+                        <tr>
+                            <td>patternDirsToExclude</td>
+                            <td>.idea</td>
+                            <td>The folders which are located somewhere in the working directory and we do not
+                                want to copy in the output folder when generating a website.<br/>
+                                If there are many directory patterns, separate them with a space. Example: ".idea myfolder"</td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        Additional source code examples are available, please see the
+                        <a href="/usedby">websites using Gigo</a>.
+                    </p>
+
+                    <div class="publicationDetails"><time datetime="2020-09-03" pubdate="pubdate">13 April 2021</time></div>
+
+                </article>
+            </div>
+        </div>
