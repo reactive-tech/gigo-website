@@ -130,7 +130,6 @@ main {
     margin-top: 5px;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
 
@@ -139,13 +138,11 @@ main {
 div.mainContents {
     width: 100%;
     min-width: 380px;
-    max-width: 1200px;
 }
 
 div.contentsBox {
     min-width: 300px;
     height: min-content;
-    border:1px solid #666666;
     margin-bottom: 10px;
     padding: 0;
 }
@@ -160,6 +157,7 @@ div.contentsBoxHeader {
 }
 
 div.contentsBoxBody {
+    max-width: 1200px;
     padding-left: 10px;
     padding-right: 10px;
 }
