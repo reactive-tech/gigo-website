@@ -1,0 +1,3 @@
+outputDir: /usr/share/dev-output/static-websites/gigo-website/image
+patternFilesToExclude: "deploy.sh .gitignore README.md"
+patternDirsToExclude: "deployment .idea .git"

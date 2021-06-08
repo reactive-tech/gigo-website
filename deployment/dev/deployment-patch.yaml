@@ -1,0 +1,16 @@
+spec:
+  template:
+    spec:
+      volumes:
+        - name: gigo-website-dev-putput-pv
+          hostPath:
+            path: /usr/share/dev-output/static-websites/gigo-website/image
+            type: DirectoryOrCreate
+
+      containers:
+        - image: localhost:5000/reactivetechio/gigo-website:latest
+          name: gigo-website
+
+          volumeMounts:
+            - name: gigo-website-dev-putput-pv
+              mountPath: /usr/share/nginx/html
