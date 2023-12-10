@@ -2,13 +2,15 @@
 
 source ~/source/kubernetes-cluster/deployment/app/baseDeploy.sh
 
-BUILD_IMG_DEPLOYMENT_NAME="gigo-website"
-BUILD_IMG_NAMESPACE="static-websites"
+IMAGE_NAME="gigo-website"
+IMAGE_PROJECT_NAME="reactivetech"
+KUBERNETES_NAMESPACE="static-websites"
 
 function buildAppAndCopyOutput() {
-  gigo deployment/Gigo.yaml
-  cp deployment/Dockerfile $BUILD_TARGET_PATH
-  cp -rp deployment/nginx $BUILD_TARGET_PATH
+  gigo gigo.yaml
+  cp -a target/. $BUILD_TARGET_PATH/image
+  cp -rp nginx $BUILD_TARGET_PATH
+  cp docker/Dockerfile $BUILD_TARGET_PATH
 }
 
 deploy

@@ -1,0 +1,4 @@
+sourceDir: website
+outputDir: target
+patternFilesToExclude: "gigo.yaml deploy.sh .gitignore README.md"
+patternDirsToExclude: "docker nginx .idea .git"
